@@ -1,0 +1,43 @@
+body{
+ margin-bottom: 420px;
+ background: #6200EE;
+ color: #ffffff;
+ font-size: 25px;
+ font-weight: 700;
+}
+
+input, button{
+ font-size: 20px;
+ width: 150px;
+ padding: 5px 10px;
+ margin-right: 10px;
+}
+
+button{
+ cursor: pointer;
+ background: #03DAC6;
+ border: none;
+ margin-right: 0;
+ transition: background 220ms ease-in-out;
+}
+
+button:hover{
+ background: #018786;
+}
+
+.wynik{
+ max-width: 100vw;
+}
+
+.ghRepo{
+ text-decoration: none;
+ background: #3700B3;
+ color: #ffffff;
+ position: fixed;
+ line-height: 3em;
+ font-size: 30px;
+ width: 100vw;
+ text-align: center;
+ left: 0;
+ bottom: 0;
+}

@@ -35,7 +35,12 @@
       i++;
       if (lud % 2 === 0 && arr.length <= 2) break;
     }
-    console.log(`Pozostale: ${arr}\nKolejnosc eliminowania: ${wyeliminowane}`);
+
+    const wynikKoncowy = `Pozostale: ${arr.join(
+      " i "
+    )}\nKolejnosc eliminowania: ${wyeliminowane.join(", ")}`;
+    console.log(wynikKoncowy);
+    wynik.innerText = wynikKoncowy;
 
     // console.log(lud, coIle);
   };
@@ -43,7 +48,7 @@
   pressEnter = ({ key }, where) => {
     console.log(key);
     if (key === "Enter") calculate();
-    else if(key === 'Tab') document.querySelector(where).focus
+    else if (key === "Tab") document.querySelector(where).focus;
   };
 
   const input_1 = document.createElement("input");
@@ -51,14 +56,23 @@
   input_1.autofocus = true;
   input_1.placeholder = "Ile ludzi";
   input_1.id = "in1";
-  input_1.onkeydown = (ev) => pressEnter(ev, '#in2');
+  input_1.onkeydown = ev => pressEnter(ev, "#in2");
 
   const input_2 = document.createElement("input");
   input_2.type = "number";
   input_2.placeholder = "Co ile ludzi";
   input_2.id = "in2";
-  input_2.onkeydown = (ev) => pressEnter(ev, '#in1');
+  input_2.onkeydown = ev => pressEnter(ev, "#in1");
+
+  const button = document.createElement("button");
+  button.innerText = "Pokaz wynik";
+  button.onclick = calculate;
+
+  const wynik = document.createElement("div");
+  wynik.className = "wynik";
 
   root.appendChild(input_1);
   root.appendChild(input_2);
+  root.appendChild(button);
+  root.appendChild(wynik);
 })();
