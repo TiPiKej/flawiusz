@@ -1,0 +1,28 @@
+{
+  "name": "flawiusz",
+  "version": "1.0.0",
+  "homepage": "https://tipikej.github.io/flawiusz",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "startServer": "cd ./dist/ && live-server",
+    "openEditor": "code ./dist/",
+    "start": "start powershell npm run startServer && npm run openEditor",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiPiKej/flawiusz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TiPiKej/flawiusz/issues"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "live-server": "^1.2.1"
+  }
+}
